@@ -6,6 +6,14 @@ import Checkmark from '../assets/images/icons/checkmark.png'
 import { products } from '../../starting-code/data/products'
 
 export function HomePage() {
+
+    fetch('http://localhost:3000/api/products')
+        .then((response) => {
+            return response.json()
+        }).then((data) => {
+            console.log(data)
+        })
+
     return (
         <>
             <link rel="icon" href="home-favicon.png" />
