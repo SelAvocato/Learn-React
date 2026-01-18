@@ -16,7 +16,7 @@ export function CheckoutPage({ cart, loadCart }) {
         }
         fetchCheckoutData()
     }, [])
-    
+
     useEffect(() => {
         const fetchPaymentSummary = async() => {
             const respose = await axios.get('/api/payment-summary')
@@ -24,6 +24,9 @@ export function CheckoutPage({ cart, loadCart }) {
         }
         fetchPaymentSummary()
     }, [cart])
+
+    
+    //window.axios = axios
     return (
         <>
             <link rel="icon" href="cart-favicon.png" />
