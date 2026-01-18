@@ -17,7 +17,6 @@ export function CheckoutPage({ cart, loadCart }) {
             response = await axios.get('/api/payment-summary')
             setPaymentSummary(response.data)
         }
-
         fetchCheckoutData()
     }, [cart])
 
