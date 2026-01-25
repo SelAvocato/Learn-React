@@ -7,7 +7,6 @@ import { Product } from './Product'
 vi.mock('axios')
 
 let product
-
 let loadCart
 
 beforeEach(() => {
@@ -57,6 +56,7 @@ describe('Product Component', () => {
         const user = userEvent.setup()
         const addToCartButton = screen.getByTestId('add-to-cart-button')
         await user.click(addToCartButton)
+        const quantitySelector = screen.getByTestId('product-quantity-selector')
 
         expect(axios.post).toHaveBeenCalledWith('/api/cart-items', {
             productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
@@ -64,5 +64,7 @@ describe('Product Component', () => {
         })
 
         expect(loadCart).toHaveBeenCalled();
+
+        expect(quantitySelector).toHaveValue('1')
     })
 })
