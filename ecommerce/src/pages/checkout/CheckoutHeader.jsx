@@ -15,8 +15,7 @@ export function CheckoutHeader({ cart }) {
             <div className="header-content">
                 <div className="checkout-header-left-section">
                     <Link to="/">
-                        <img className="logo" src={Logo} />
-                        <img className="mobile-logo" src={MobileLogo} />
+                        <div className='checkout-title'>Ecommerce</div>
                     </Link>
                 </div>
 

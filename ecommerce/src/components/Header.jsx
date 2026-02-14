@@ -41,10 +41,7 @@ export function Header({cart, searchText}) {
             <div className="header">
                 <div className="left-section">
                     <NavLink to="/" className="header-link" onClick={resetSearch}>
-                        <img className="logo"
-                            src={WhiteLogo} />
-                        <img className="mobile-logo"
-                            src={MobileLogo} />
+                        <div className='title'>Ecommerce</div>
                     </NavLink>
                 </div>
 
