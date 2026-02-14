@@ -4,7 +4,6 @@ import WhiteLogo from '../assets/images/logo-white.png'
 import MobileLogo from '../assets/images/mobile-logo-white.png'
 import CartIcon from '../assets/images/icons/cart-icon.png'
 import SearchIcon from '../assets/images/icons/search-icon.png'
-
 import './Header.css';
 
 export function Header({cart, searchText}) {
